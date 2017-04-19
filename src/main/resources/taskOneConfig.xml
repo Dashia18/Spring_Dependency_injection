@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--task 1-->
+    <!--primitives-->
+        <bean id="personSI" class="TaskOne.Person">
+            <property name="firstName" value="Daria"/>
+            <property name="lastName" value="Serebryakova"/>
+            <property name="age" value="26"/>
+        </bean>
+
+        <bean id="personCI" class="TaskOne.Person">
+            <constructor-arg index="1" value="Vasya"/>
+            <constructor-arg index="0" value="Kozlov"/>
+            <constructor-arg index="2" value="24"/>
+        </bean>
+        <bean id="universityCI" class="TaskOne.University">
+            <constructor-arg index="0" value="UNN"/>
+            <constructor-arg index="1" value="90000"/>
+
+        </bean>
+
+    <!--objects-->
+        <bean id="studentSI" class="TaskOne.Student">
+            <property name="person" ref="personSI"/>
+            <property name="university" ref="universityCI"/>
+        </bean>
+
+        <bean id="studentCI" class="TaskOne.Student">
+            <constructor-arg ref="personCI"/>
+            <constructor-arg ref="universityCI"/>
+        </bean>
+
+
+
+
+</beans>
