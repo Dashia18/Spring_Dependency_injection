@@ -5,12 +5,18 @@
 
 
     <!--task 1-->
+
     <!--primitives-->
+
+    <!--Setter Injection-->
+
         <bean id="personSI" class="TaskOne.Person">
             <property name="firstName" value="Daria"/>
             <property name="lastName" value="Serebryakova"/>
             <property name="age" value="26"/>
         </bean>
+
+    <!--Constructor Injection-->
 
         <bean id="personCI" class="TaskOne.Person">
             <constructor-arg index="1" value="Vasya"/>
@@ -24,10 +30,15 @@
         </bean>
 
     <!--objects-->
+
+    <!--Setter Injection-->
+
         <bean id="studentSI" class="TaskOne.Student">
             <property name="person" ref="personSI"/>
             <property name="university" ref="universityCI"/>
         </bean>
+
+    <!--Constructor Injection-->
 
         <bean id="studentCI" class="TaskOne.Student">
             <constructor-arg ref="personCI"/>
