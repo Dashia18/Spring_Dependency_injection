@@ -8,7 +8,7 @@
 
     <!--Setter Injection-->
 
-    <bean id="collectionInjectionSI" class="TaskTwo.UniversityGroup">
+    <bean id="collectionInjectionSI" class="taskTwo.UniversityGroup">
         <property name="studentsList">
             <list>
                 <value>Egorov</value>
@@ -38,7 +38,7 @@
 
     <!--Constructor Injection-->
 
-    <bean id="collectionInjectionCI" class="TaskTwo.UniversityGroup">
+    <bean id="collectionInjectionCI" class="taskTwo.UniversityGroup">
         <constructor-arg name="studentsList">
             <list>
                 <value>Vasya R.</value>

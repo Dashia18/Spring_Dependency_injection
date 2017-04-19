@@ -1,4 +1,4 @@
-package HelloTest;
+package helloTest;
 
 /**
  * Created by Daria Serebryakova on 18.04.2017.
@@ -17,7 +17,7 @@ public class HelloBean {
 
     @Override
     public String toString() {
-        return "HelloTest.HelloBean{" +
+        return "helloTest.HelloBean{" +
                 "massage='" + massage + '\'' +
                 '}';
     }

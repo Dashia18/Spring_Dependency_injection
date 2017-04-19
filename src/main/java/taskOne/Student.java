@@ -1,4 +1,4 @@
-package TaskOne;
+package taskOne;
 
 /**
  * Created by Daria Serebryakova on 18.04.2017.

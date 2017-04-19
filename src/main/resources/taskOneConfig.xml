@@ -10,7 +10,7 @@
 
     <!--Setter Injection-->
 
-        <bean id="personSI" class="TaskOne.Person">
+        <bean id="personSI" class="taskOne.Person">
             <property name="firstName" value="Daria"/>
             <property name="lastName" value="Serebryakova"/>
             <property name="age" value="26"/>
@@ -18,12 +18,12 @@
 
     <!--Constructor Injection-->
 
-        <bean id="personCI" class="TaskOne.Person">
+        <bean id="personCI" class="taskOne.Person">
             <constructor-arg index="1" value="Vasya"/>
             <constructor-arg index="0" value="Kozlov"/>
             <constructor-arg index="2" value="24"/>
         </bean>
-        <bean id="universityCI" class="TaskOne.University">
+        <bean id="universityCI" class="taskOne.University">
             <constructor-arg index="0" value="UNN"/>
             <constructor-arg index="1" value="90000"/>
 
@@ -33,14 +33,14 @@
 
     <!--Setter Injection-->
 
-        <bean id="studentSI" class="TaskOne.Student">
+        <bean id="studentSI" class="taskOne.Student">
             <property name="person" ref="personSI"/>
             <property name="university" ref="universityCI"/>
         </bean>
 
     <!--Constructor Injection-->
 
-        <bean id="studentCI" class="TaskOne.Student">
+        <bean id="studentCI" class="taskOne.Student">
             <constructor-arg ref="personCI"/>
             <constructor-arg ref="universityCI"/>
         </bean>

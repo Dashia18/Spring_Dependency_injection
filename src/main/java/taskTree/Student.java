@@ -1,4 +1,4 @@
-package TaskTree;
+package taskTree;
 
 /**
  * Created by Daria Serebryakova on 19.04.2017.

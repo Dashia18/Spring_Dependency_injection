@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="helloBean" class="HelloTest.HelloBean">
+    <bean id="helloBean" class="helloTest.HelloBean">
         <property name = "massage" value = "Hello from my first Spring APP"/>
     </bean>
 

@@ -1,4 +1,4 @@
-package TaskTwo;
+package taskTwo;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
