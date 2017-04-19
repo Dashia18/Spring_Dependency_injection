@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--task 2-->
+
+    <!--Setter Injection-->
+
+    <bean id="collectionInjectionSI" class="TaskTwo.UniversityGroup">
+        <property name="studentsList">
+            <list>
+                <value>Egorov</value>
+                <value>Morozov</value>
+                <value>Lapshin</value>
+                <value>Kozlov</value>
+            </list>
+        </property>
+        <property name="studentSet">
+            <set>
+                <value>Sidorov</value>
+                <value>Ivanov</value>
+                <value>Voronina</value>
+                <value>Grach</value>
+            </set>
+        </property>
+        <property name="studentMap">
+            <map>
+                <entry key = "1" value="Orlov"/>
+                <entry key = "2" value="Kuznecov"/>
+                <entry key = "3" value="Ivanova"/>
+                <entry key = "4" value="Kozlova"/>
+            </map>
+        </property>
+
+    </bean>
+
+    <!--Constructor Injection-->
+
+    <bean id="collectionInjectionCI" class="TaskTwo.UniversityGroup">
+        <constructor-arg name="studentsList">
+            <list>
+                <value>Vasya R.</value>
+                <value>Masha D.</value>
+                <value>Kostay P.</value>
+                <value>Sasha O.</value>
+                <value>Alexey K.</value>
+            </list>
+        </constructor-arg>
+
+        <constructor-arg name="studentSet">
+            <set>
+                <value>Tolay U.</value>
+                <value>Masha O.</value>
+                <value>Tom R.</value>
+                <value>Sonay N.</value>
+                <value>Anton E.</value>
+            </set>
+        </constructor-arg>
+        <constructor-arg name="studentMap">
+            <map>
+                <entry key="1" value="Igor R."/>
+                <entry key="2" value="Boris E."/>
+                <entry key="3" value="Vadim S."/>
+                <entry key="4" value="Vitaly K."/>
+            </map>
+        </constructor-arg>
+
+
+
+
+    </bean>
+</beans>
