@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="maria" class="taskFive.Person">
+        <property name="firstName" value="Maria"/>
+        <property name="lastName" value="Ivanova"/>
+        <property name="age" value="45"/>
+        <property name="gender" value="female"/>
+    </bean>
+
+    <bean id="ivan" class="taskFive.Person">
+        <property name="firstName" value="Ivan"/>
+        <property name="lastName" value="Ivanov"/>
+        <property name="age" value="47"/>
+        <property name="gender" value="male"/>
+    </bean>
+    <bean id="petr" class="taskFive.Person">
+        <property name="firstName" value="Petr"/>
+        <property name="lastName" value="Ivanov"/>
+        <property name="age" value="20"/>
+        <property name="gender" value="male"/>
+    </bean>
+
+
+    <!--Autowire - No -->
+
+    <bean id="children" class="taskFive.Children">
+        <property name="person" ref="petr"/>
+        <property name="mother" ref="maria"/>
+        <property name="father" ref="ivan"/>
+    </bean>
+
+    <!--Autowire - by Name -->
+
+    <bean id="father" class="taskFive.Father" autowire="byName">
+        <property name="person" ref="ivan"/>
+    </bean>
+
+    <!--Autowire - by Type -->
+
+    <bean id="mother" class="taskFive.Mother" autowire="byType">
+        <property name="person" ref="maria"/>
+    </bean>
+
+    <!--Autowire - by constructor -->
+    <bean id="family" class="taskFive.Family" autowire="constructor">
+    </bean>
+
+
+
+
+
+</beans>
